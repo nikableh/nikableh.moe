@@ -10,4 +10,4 @@ Files in this repository are under the [CC-BY-4.0] license.
 
 ## 88x31
 
-![88x31.png](88x31.png)
+![88x31.png](public/88x31.png)
