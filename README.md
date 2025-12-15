@@ -7,3 +7,7 @@ Repository of the nikableh.moe website.
 Files in this repository are under the [CC-BY-4.0] license.
 
 [CC-BY-4.0]: https://creativecommons.org/licenses/by/4.0/
+
+## 88x31
+
+![88x31.png](88x31.png)
