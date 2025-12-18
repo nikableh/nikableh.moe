@@ -8,6 +8,12 @@
     font-display: swap;
 }
 
+@theme {
+  --color-bodily-500: #e3dcd1;
+  --color-apple-500: #b83a2d;
+  --color-brokkoli-500: #4e6851;
+}
+
 body {
     font-family: "Maple Mono";
 }
