@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-red-500">
-    haiiiiiiiii
-  </div>
+    <div class="bg-neutral-900 h-screen text-white">
+        haiiiiiiiii
+        <WebringNavBar />
+    </div>
 </template>
