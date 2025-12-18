@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+  <div class="bg-red-500">
+    haiiiiiiiii
   </div>
 </template>
