@@ -1,44 +1,62 @@
 <template>
-    <div class="bg-neutral-900 h-full text-bodily">
-        <main class="p-5 h-screen gap-3 flex flex-col items-center">
-            <img
-                src="/nikableh.png"
-                alt="nikableh's profile picture"
-                width="50%"
-                class="select-none"
-            />
-            <div class="flex flex-col items-center text-center">
+    <section class="bg-neutral-900 h-full text-bodily">
+        <main class="p-5 h-screen gap-5 flex flex-col items-center">
+            <section class="flex flex-col items-center text-center w-full">
+                <img
+                    src="/nikableh.png"
+                    alt="nikableh's profile picture"
+                    width="50%"
+                    class="select-none"
+                />
+            </section>
+            <section class="flex flex-col items-center text-center w-full">
                 <p>Nika <em>(aka nikableh)</em></p>
-            </div>
-            <div
-                class="w-full grid grid-cols-2 gap-x-10 gap-y-0 justify-items-start items-center"
-            >
-                <span>Current location:</span>
-                <p>Moscow, Russia</p>
+            </section>
+            <section class="flex flex-col items-center text-center w-full">
+                <div
+                    class="w-full grid grid-cols-2 gap-x-10 gap-y-0 justify-items-start items-start"
+                >
+                    <span>Current location:</span>
+                    <p>Moscow, Russia</p>
 
-                <span>Telegram:</span>
-                <p>
-                    <NuxtLink to="https://t.me/nikableh" class="text-link"
-                        >@nikableh</NuxtLink
-                    >
-                </p>
+                    <span>Pronouns:</span>
+                    <p>she/her 🏳️‍⚧️</p>
 
-                <span>Github:</span>
-                <p>
-                    <NuxtLink to="https://github.com/nikableh" class="text-link"
-                        >@nikableh</NuxtLink
-                    >
-                </p>
-            </div>
-            <div class="w-full">
+                    <span>Telegram:</span>
+                    <p>
+                        <NuxtLink to="https://t.me/nikableh" class="text-link"
+                            >@nikableh</NuxtLink
+                        >
+                    </p>
+
+                    <span>Github:</span>
+                    <p>
+                        <NuxtLink
+                            to="https://github.com/nikableh"
+                            class="text-link"
+                            >@nikableh</NuxtLink
+                        >
+                    </p>
+
+                    <span>Email:</span>
+                    <p>
+                        <NuxtLink
+                            to="mailto:nika@nikableh.moe"
+                            class="text-link"
+                            >nika@nikableh.moe</NuxtLink
+                        >
+                    </p>
+                </div>
+            </section>
+            <section class="flex flex-col items-start w-full">
                 <Heading>My badge</Heading>
                 <Badge88x31
                     website="https://nikableh.moe"
                     image="https://nikableh.moe/88x31.png"
                     alt="nikableh's 88x31 badge"
                 />
-            </div>
-            <div class="w-full">
+            </section>
+            <section class="text-center w-full">
                 <Heading>Frens</Heading>
                 <Badge88x31
                     website="https://otomir23.me/"
@@ -55,13 +73,33 @@
                     image="https://std.mem.transmute.me/88x31/transmute.png"
                     alt="polina4096's 88x31 badge"
                 />
-                 <Badge88x31
+                <Badge88x31
                     website="https://catboy.page/"
-                    image="https://std.mem.transmute.me/88x31/transmute.png"
+                    image="https://catboy.page/images/catboybinary.png"
                     alt="catboybinary's 88x31 badge"
                 />
-            </div>
+                <Badge88x31
+                    website="https://preview.about.akarpov.ru/"
+                    image="/88x31-unknown.png"
+                    alt="sanspie's 88x31 badge"
+                />
+                <Badge88x31
+                    website="https://wof.rs/"
+                    image="/88x31-unknown.png"
+                    alt="oljoi's 88x31 badge"
+                />
+                <Badge88x31
+                    website="https://femboy.page/"
+                    image="/88x31-unknown.png"
+                    alt="devilreef's 88x31 badge"
+                />
+                <Badge88x31
+                    website="https://bento.me/keet"
+                    image="/88x31-unknown.png"
+                    alt="keet's 88x31 badge"
+                />
+            </section>
         </main>
         <WebringNavBar />
-    </div>
+    </section>
 </template>
