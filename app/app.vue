@@ -63,7 +63,7 @@
                             girl and a huge dum-dum.
                         </p>
                         <p>
-                            Fueled by estradiol, vortioxetine and, occasionally,
+                            Fueled by estradiol, vortioxetine, and, occasionally,
                             a cherry-flavored beer.
                         </p>
                     </div>
