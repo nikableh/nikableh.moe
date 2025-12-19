@@ -9,10 +9,12 @@
 }
 
 @theme {
-  --color-bodily: #e3dcd1;
-  --color-apple: #b83a2d;
-  --color-brokkoli: #4e6851;
-  --color-link: #8ea4de;
+    --color-bodily: #e3dcd1;
+    --color-apple: #b83a2d;
+    --color-brokkoli: #4e6851;
+    --color-link: #8ea4de;
+
+    --text-tiny: 0.5rem;
 }
 
 ::selection {
