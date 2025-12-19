@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="w-full">
         <ul class="flex justify-between py-2 px-4">
             <li>
                 <NuxtLink

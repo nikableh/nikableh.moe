@@ -1,11 +1,13 @@
 <template>
-    <div class="wip-ribbon top h-2 flex items-center"></div>
-    <div
-        class="bg-yellow-400 text-black w-full text-center text-sm tracking-widest"
-    >
-        WORK IN PROGRESS
+    <div class="w-full select-none">
+        <div class="wip-ribbon top h-2 flex items-center"></div>
+        <div
+            class="bg-yellow-400 text-black w-full text-center text-sm tracking-widest"
+        >
+            WORK IN PROGRESS
+        </div>
+        <div class="wip-ribbon bottom h-2 flex items-center"></div>
     </div>
-    <div class="wip-ribbon bottom h-2 flex items-center"></div>
 </template>
 
 <style lang="css" scoped>
