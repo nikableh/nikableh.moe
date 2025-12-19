@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full select-none">
+    <div class="w-full select-none pointer-events-none">
         <div class="wip-ribbon top h-2 flex items-center"></div>
         <div
             class="bg-yellow-400 text-black w-full text-center text-sm tracking-widest"
