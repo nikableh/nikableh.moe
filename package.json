@@ -13,6 +13,7 @@
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/image": "^2.0.0",
     "@tailwindcss/vite": "^4.1.18",
+    "canvas-confetti": "^1.9.4",
     "nuxt": "^4.2.2",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.25",
