@@ -23,7 +23,6 @@
         devShells.default = pkgs.mkShell {
           buildInputs = [
             pkgs.bash
-            pkgs.deno
             pkgs.nodejs
             pkgs.node-gyp
             pkgs.python3

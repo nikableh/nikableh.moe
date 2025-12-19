@@ -16,8 +16,8 @@ jobs:
       - name: Enter nix devShell
         uses: nicknovitski/nix-develop@v1
       - run: nix flake check
-      - run: deno install
-      - run: deno task build --preset github_pages
+      - run: npm install
+      - run: npm run build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
