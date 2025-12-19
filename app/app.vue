@@ -94,6 +94,11 @@
                     alt="catboybinary's 88x31 badge"
                 />
                 <Badge88x31
+                    website="https://keetsta.me/"
+                    image="https://keetsta.me/88x31.png"
+                    alt="keet's 88x31 badge"
+                />
+                <Badge88x31
                     website="https://preview.about.akarpov.ru/"
                     image="/88x31-unknown.png"
                     alt="sanspie's 88x31 badge"
@@ -107,11 +112,6 @@
                     website="https://femboy.page/"
                     image="/88x31-unknown.png"
                     alt="devilreef's 88x31 badge"
-                />
-                <Badge88x31
-                    website="https://bento.me/keet"
-                    image="/88x31-unknown.png"
-                    alt="keet's 88x31 badge"
                 />
             </section>
         </main>
