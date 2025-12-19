@@ -1,23 +1,24 @@
 <template>
     <section class="bg-neutral-900 h-full text-bodily">
         <WipRibbon />
-        <main class="p-5 h-screen gap-5 flex flex-col items-center">
+        <main class="p-5 min-h-screen gap-5 flex flex-col items-center">
             <section class="flex flex-col items-center text-center w-full">
-                <img
+                <NuxtImg
                     src="/nikableh.png"
                     alt="nikableh's profile picture"
-                    width="50%"
+                    width="200px"
                     class="select-none"
+                    placeholder
                 />
             </section>
             <section class="flex flex-col items-center text-center w-full">
                 <p>Nika <em>(aka nikableh)</em></p>
             </section>
-            <section class="flex flex-col items-center text-center w-full">
+            <section class="flex flex-col w-full">
                 <div
-                    class="w-full grid grid-cols-2 gap-x-10 gap-y-0 justify-items-start items-start"
+                    class="w-full grid grid-cols-2 gap-y-1 justify-items-start items-start"
                 >
-                    <span>Current location:</span>
+                    <span>Location:</span>
                     <p>Moscow, Russia</p>
 
                     <span>Pronouns:</span>
@@ -43,7 +44,7 @@
                     <p>
                         <NuxtLink
                             to="mailto:nika@nikableh.moe"
-                            class="text-link"
+                            class="text-link break-all"
                             >nika@nikableh.moe</NuxtLink
                         >
                     </p>
@@ -51,7 +52,7 @@
             </section>
             <section class="flex flex-col w-full">
                 <Heading>About me</Heading>
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2 leading-5">
                     <p>
                         A burned-out C/C++/Rust Systems Programmer, a trans girl
                         and a huge dum-dum.
