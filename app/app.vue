@@ -52,13 +52,13 @@
             </section>
             <section class="flex flex-col w-full">
                 <Heading>About me</Heading>
-                <div class="flex flex-col gap-2 leading-5">
+                <div class="flex flex-col gap-2">
                     <p>
                         A burned-out C/C++/Rust Systems Programmer, a trans girl
                         and a huge dum-dum.
                     </p>
                     <p>
-                        Runs on estradiol, vortioxetine and, occasionally, a
+                        Fueled by estradiol, vortioxetine and, occasionally, a
                         cherry-flavored beer.
                     </p>
                 </div>

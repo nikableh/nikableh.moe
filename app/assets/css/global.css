@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: "Maple Mono";
-    src: url("/fonts/MapleMonoNL-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @theme {
     --color-bodily: #e3dcd1;
     --color-apple: #b83a2d;

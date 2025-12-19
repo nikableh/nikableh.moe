@@ -16,5 +16,11 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['@nuxt/image'],
+  modules: ['@nuxt/image', '@nuxt/fonts'],
+
+  fonts: {
+    families: [
+      { name: 'Maple Mono', src: '/fonts/MapleMonoNL-Regular.woff2' }
+    ],
+  }
 })
