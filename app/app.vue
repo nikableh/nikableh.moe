@@ -3,7 +3,7 @@
         <WipRibbon />
         <main class="p-5 min-h-screen gap-5 flex flex-col items-center">
             <section class="flex flex-col items-center text-center w-full">
-                <NuxtImg
+                <NuxtPicture
                     src="/nikableh.png"
                     alt="nikableh's profile picture"
                     width="200px"

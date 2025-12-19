@@ -22,5 +22,8 @@ export default defineNuxtConfig({
     families: [
       { name: 'Maple Mono', src: '/fonts/MapleMonoNL-Regular.woff2' }
     ],
+    defaults: {
+      preload: true,
+    },
   }
 })
