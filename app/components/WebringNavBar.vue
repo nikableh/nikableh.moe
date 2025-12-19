@@ -1,20 +1,20 @@
 <template>
-    <nav class="">
-        <ul class="flex justify-between p-2">
+    <nav>
+        <ul class="flex justify-between py-2 px-4">
             <li>
                 <NuxtLink
                     to="https://webring.otomir23.me/nikableh/prev"
-                    class="before:content-['< ']"
+                    class="before:content-['< '] text-link"
                     >prev</NuxtLink
                 >
             </li>
             <li>
-                <NuxtLink to="https://webring.otomir23.me/">webring</NuxtLink>
+                <NuxtLink to="https://webring.otomir23.me/" class="text-link">webring</NuxtLink>
             </li>
             <li>
                 <NuxtLink
                     to="https://webring.otomir23.me/nikableh/next"
-                    class="after:content-[' >']"
+                    class="after:content-[' >'] text-link"
                     >next</NuxtLink
                 >
             </li>

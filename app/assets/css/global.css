@@ -9,9 +9,16 @@
 }
 
 @theme {
-  --color-bodily-500: #e3dcd1;
-  --color-apple-500: #b83a2d;
-  --color-brokkoli-500: #4e6851;
+  --color-bodily: #e3dcd1;
+  --color-apple: #b83a2d;
+  --color-brokkoli: #4e6851;
+  --color-link: #8ea4de;
+}
+
+::selection {
+    background: oklch(94.5% 0.129 101.54);
+    color: black;
+    text-shadow: none;
 }
 
 body {
