@@ -30,13 +30,14 @@ function shoot(e: PointerEvent) {
 
 <template>
     <div class="cursor-pointer select-none" @pointerup="shoot">
-        <NuxtPicture
+        <NuxtImg
             src="/nikableh.png"
             alt="nikableh's profile picture"
             width="200px"
             draggable="false"
             class="pointer-events-none select-none"
-            placeholder
+            loading="eager"
+            fetch-priority="high"
         />
     </div>
 </template>
