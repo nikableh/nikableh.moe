@@ -89,7 +89,7 @@ function shoot(e: PointerEvent) {
                     <Heading>About me</Heading>
                     <div class="flex flex-col gap-2">
                         <p>
-                            A burned-out C/C++/Rust Systems Programmer, a trans
+                            A burned-out Systems Programmer, a trans
                             girl and a huge dum-dum.
                         </p>
                         <p>
