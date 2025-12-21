@@ -1,12 +1,12 @@
 <template>
-    <div class="w-full select-none pointer-events-none">
-        <div class="wip-ribbon top h-2 flex items-center"></div>
+    <div class="w-full flex select-none pointer-events-none">
+        <div class="wip-ribbon top w-full flex items-center"></div>
         <div
-            class="bg-yellow-400 text-black w-full text-center text-sm tracking-widest"
+            class="bg-yellow-400 text-black w-max whitespace-nowrap px-3 text-center text-sm tracking-widest"
         >
             WORK IN PROGRESS
         </div>
-        <div class="wip-ribbon bottom h-2 flex items-center"></div>
+        <div class="wip-ribbon bottom w-full flex items-center"></div>
     </div>
 </template>
 
