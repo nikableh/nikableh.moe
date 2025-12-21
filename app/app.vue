@@ -116,21 +116,3 @@
         </div>
     </section>
 </template>
-<!-- 
-<style lang="css" scoped>
-@keyframes unsquish {
-    0% {
-        transform: scale(1);
-    }
-    40% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.bounce-release {
-    animation: unsquish 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-</style> -->
