@@ -38,6 +38,7 @@ function shoot(e: PointerEvent) {
             class="pointer-events-none select-none"
             loading="eager"
             fetch-priority="high"
+            format="webp"
         />
     </div>
 </template>
