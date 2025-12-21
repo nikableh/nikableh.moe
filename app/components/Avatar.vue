@@ -35,7 +35,7 @@ function shoot(e: PointerEvent) {
             alt="nikableh's profile picture"
             width="200px"
             draggable="false"
-            class="pointer-events-none select-none transform transition-transform duration-300 ease-out active:scale-90"
+            class="pointer-events-none select-none"
             placeholder
         />
     </div>
