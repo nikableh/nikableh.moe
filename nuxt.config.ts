@@ -27,6 +27,10 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    provider: 'none'
+  },
+
   app: {
     head: {
       title: "nikableh.moe",
