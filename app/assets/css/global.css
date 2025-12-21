@@ -16,4 +16,5 @@
 
 body {
     font-family: "Maple Mono";
+    background-color: var(--color-yetdarker);
 }
