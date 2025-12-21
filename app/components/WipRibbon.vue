@@ -2,7 +2,7 @@
     <div class="w-full flex select-none pointer-events-none">
         <div class="wip-ribbon top w-full flex items-center"></div>
         <div
-            class="bg-yellow-400 text-black w-max whitespace-nowrap px-3 text-center text-sm tracking-widest"
+            class="bg-yellow-400 text-black w-max whitespace-nowrap px-3 text-center text-sm font-bold tracking-widest"
         >
             WORK IN PROGRESS
         </div>
