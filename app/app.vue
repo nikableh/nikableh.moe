@@ -134,14 +134,14 @@ function shoot(e: PointerEvent) {
                         alt="keet's 88x31 badge"
                     />
                     <Badge88x31
+                        website="https://puppy.support/"
+                        image="https://puppy.support/88x31/shutup.gif"
+                        alt="oljoi's 88x31 badge"
+                    />
+                    <Badge88x31
                         website="https://preview.about.akarpov.ru/"
                         image="/88x31-unknown.png"
                         alt="sanspie's 88x31 badge"
-                    />
-                    <Badge88x31
-                        website="https://wof.rs/"
-                        image="/88x31-unknown.png"
-                        alt="oljoi's 88x31 badge"
                     />
                     <Badge88x31
                         website="https://femboy.page/"
