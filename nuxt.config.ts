@@ -71,7 +71,6 @@ export default defineNuxtConfig({
         { name: "theme-color", content: appManifest.theme_color },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
         { rel: 'manifest', href: '/manifest.webmanifest' },
       ]
     }
