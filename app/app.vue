@@ -1,33 +1,3 @@
-<script setup lang="ts">
-import confetti from "canvas-confetti";
-
-const scalar = ref(3);
-
-function shoot(e: PointerEvent) {
-    let normX = e.clientX / window.innerWidth;
-    let normY = e.clientY / window.innerHeight;
-
-    confetti({
-        spread: 360,
-        ticks: 50,
-        gravity: 0,
-        startVelocity: 5,
-        shapes: [
-            confetti.shapeFromText({
-                text: "bleh",
-                color: "#FFFFFF",
-                scalar: scalar.value,
-                fontFamily: "Maple Mono",
-            }),
-        ],
-        particleCount: 1,
-        flat: true,
-        scalar: scalar.value,
-        origin: { x: normX, y: normY },
-    });
-}
-</script>
-
 <template>
     <section
         class="bg-neutral-900 h-full text-bodily flex flex-col items-center"
@@ -36,15 +6,7 @@ function shoot(e: PointerEvent) {
         <div class="flex flex-col items-center md:w-2xl">
             <main class="p-5 min-h-screen gap-5 flex flex-col items-center">
                 <section class="flex flex-col items-center text-center w-full">
-                    <NuxtPicture
-                        src="/nikableh.png"
-                        alt="nikableh's profile picture"
-                        width="200px"
-                        draggable="false"
-                        class="cursor-pointer select-none transform transition-transform duration-300 ease-out active:scale-90"
-                        placeholder
-                        @mouseup="shoot"
-                    />
+                    <Avatar />
                 </section>
                 <section class="flex flex-col items-center text-center w-full">
                     <p>Nika <em>(aka nikableh)</em></p>
@@ -89,8 +51,8 @@ function shoot(e: PointerEvent) {
                     <Heading>About me</Heading>
                     <div class="flex flex-col gap-2">
                         <p>
-                            A burned-out Systems Programmer, a trans
-                            girl and a huge dum-dum.
+                            A burned-out Systems Programmer, a trans girl and a
+                            huge dum-dum.
                         </p>
                         <p>
                             Fueled by estradiol, vortioxetine, and,
