@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ['@nuxt/image', '@nuxt/fonts'],
+  modules: ['@nuxt/image', '@nuxt/fonts', '@vite-pwa/nuxt'],
 
   fonts: {
     families: [
