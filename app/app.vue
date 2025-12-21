@@ -1,6 +1,6 @@
 <template>
     <section
-        class="bg-neutral-900 h-full text-bodily flex flex-col items-center"
+        class="bg-yetdarker h-full text-bodily flex flex-col items-center"
     >
         <WipRibbon />
         <div class="flex flex-col items-center md:w-2xl">
