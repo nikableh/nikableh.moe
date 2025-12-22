@@ -2,10 +2,8 @@
     <div class="w-full flex select-none pointer-events-none">
         <div class="wip-ribbon top w-full flex items-center"></div>
         <div
-            class="bg-yellow-400 text-black w-max whitespace-nowrap px-3 text-center text-sm font-bold tracking-widest"
-        >
-            WORK IN PROGRESS
-        </div>
+            class="bg-yellow-400 before:content-['WORK_IN_PROGRESS'] before:text-black w-max before:whitespace-nowrap px-3 text-center before:text-sm before:font-bold before:tracking-widest"
+        ></div>
         <div class="wip-ribbon bottom w-full flex items-center"></div>
     </div>
 </template>
