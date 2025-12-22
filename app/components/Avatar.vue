@@ -31,7 +31,7 @@ function shoot(e: PointerEvent) {
 <template>
     <div class="cursor-pointer select-none" @pointerup="shoot">
         <img
-            src="~/assets/img/nikableh.png"
+            src="/nikableh.png"
             alt="nikableh's profile picture"
             width="200px"
             draggable="false"
