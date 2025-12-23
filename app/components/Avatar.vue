@@ -3,7 +3,7 @@ import confetti from "canvas-confetti";
 
 const scalar = ref(3);
 
-function shoot(e: PointerEvent) {
+function bleh(e: PointerEvent) {
     let normX = e.clientX / window.innerWidth;
     let normY = e.clientY / window.innerHeight;
 
@@ -29,7 +29,7 @@ function shoot(e: PointerEvent) {
 </script>
 
 <template>
-    <div class="cursor-pointer select-none" @pointerup="shoot">
+    <div class="cursor-pointer select-none" @pointerup="bleh">
         <img
             src="/nikableh.png"
             alt="nikableh's profile picture"
