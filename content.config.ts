@@ -2,9 +2,9 @@ import { defineContentConfig, defineCollection } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
-    notes: defineCollection({
+    content: defineCollection({
       type: 'page',
-      source: 'notes/*.md'
+      source: '**/*.md'
     })
   }
 })
