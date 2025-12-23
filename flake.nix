@@ -26,6 +26,7 @@
             pkgs.nodejs
             pkgs.node-gyp
             pkgs.python3
+            pkgs.pnpm
           ];
 
           LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";

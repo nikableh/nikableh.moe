@@ -25,3 +25,6 @@ logs
 
 # direnv
 .direnv
+
+# PNPM
+pnpm-lock.yaml
