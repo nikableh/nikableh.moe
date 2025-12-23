@@ -4,11 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
-  modules: ['@nuxt/image', '@nuxt/fonts'],
-
-  runtimeConfig: {
-    public: undefined
-  },
+  modules: ['@nuxt/image', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc'],
 
   css: ['~/assets/css/global.css'],
 
