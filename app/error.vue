@@ -1,13 +1,19 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app'
+import type { NuxtError } from "#app";
 
-const props = defineProps<{ error: NuxtError }>()
+const props = defineProps<{ error: NuxtError }>();
 </script>
 
 <template>
-  <div>
-    <h1>{{ error.statusCode }}</h1>
-    <p>OOPSIE WOOPSIE!! Uwu you made a fucky wucky!! A wittle fucko boingo!</p>
-    <NuxtLink to="/">Go back home</NuxtLink>
-  </div>
+    <NuxtLayout name="default">
+        <div class="flex flex-col gap-5">
+            <ProseH1>{{ error.statusCode }}</ProseH1>
+            <p>
+                OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko
+                boingo! The code monkeys at our headquarters are working VEWY
+                HAWD to fix this!
+            </p>
+            <ProseA to="/">Go back home</ProseA>
+        </div>
+    </NuxtLayout>
 </template>
