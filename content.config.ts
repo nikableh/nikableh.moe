@@ -4,7 +4,7 @@ export default defineContentConfig({
   collections: {
     notes: defineCollection({
       type: 'page',
-      source: '**/*.md'
+      source: 'notes/*.md'
     })
   }
 })

@@ -2,10 +2,15 @@
 const route = useRoute();
 
 const { data } = await useAsyncData(() =>
-    queryCollection("notes")
-        .path("/" + route.params.note!.toString())
-        .first()
+    queryCollection("notes").path(route.fullPath).first()
 );
+
+if (!data.value) {
+    throw createError({
+        status: 404,
+        statusText: "Page Not Found, stupid",
+    });
+}
 
 useSeoMeta({
     title: data.value?.title,
@@ -14,6 +19,6 @@ useSeoMeta({
 </script>
 
 <template>
-    <ContentRenderer v-if="data" :value="data" />
-    <div v-else>Note not found</div>
+    <p>{{ $route.fullPath }}</p>
+    <ContentRenderer :value="data!" />
 </template>
