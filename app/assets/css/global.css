@@ -14,7 +14,7 @@
     text-shadow: none;
 }
 
-body {
+html, body {
     font-family: "Maple Mono";
     background-color: var(--color-yetdarker);
     color: var(--color-bodily);

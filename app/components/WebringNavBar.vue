@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full">
-        <ul class="flex justify-between py-2 px-4">
+        <ul class="flex justify-between pb-2 px-4">
             <li>
                 <NuxtLink
                     to="https://webring.otomir23.me/nikableh/prev"

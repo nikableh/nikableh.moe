@@ -39,6 +39,7 @@ export default defineNuxtConfig({
       meta: [
         { name: "description", content: "nikableh's website" },
         { name: "theme-color", content: "#171717" },
+        { name: "color-scheme", content: "dark" },
       ],
     }
   },
