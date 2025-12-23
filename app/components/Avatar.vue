@@ -29,15 +29,18 @@ function bleh(e: PointerEvent) {
 </script>
 
 <template>
-    <div class="cursor-pointer select-none" @pointerup="bleh">
-        <img
-            src="/nikableh.png"
-            alt="nikableh's profile picture"
-            width="200px"
-            draggable="false"
-            class="pointer-events-none select-none"
-            loading="eager"
-            fetch-priority="high"
-        />
+    <div
+        class="select-none flex flex-col justify-center items-center not-prose gap-5"
+    >
+        <div class="cursor-pointer" @pointerup="bleh">
+            <img
+                src="/nikableh.png"
+                alt="nikableh's profile picture"
+                width="200px"
+                draggable="false"
+                loading="eager"
+                fetch-priority="high"
+            />
+        </div>
     </div>
 </template>

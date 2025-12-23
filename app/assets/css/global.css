@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 @theme {
     --color-bodily: #e3dcd1;
@@ -10,7 +9,7 @@
 }
 
 ::selection {
-    background: oklch(94.5% 0.129 101.54);
+    background: oklch(83.336% 0.11557 101.444);
     color: black;
     text-shadow: none;
 }

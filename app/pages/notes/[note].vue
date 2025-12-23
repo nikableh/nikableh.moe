@@ -19,6 +19,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <p>{{ $route.fullPath }}</p>
-    <ContentRenderer :value="data!" />
+    <article>
+        <ContentRenderer :value="data!" />
+    </article>
 </template>
