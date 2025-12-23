@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "nuxtr.nuxt-vscode-extentions",
+        "pinage404.nix-extension-pack",
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss",
+        "dbaeumer.vscode-eslint",
+        "DavidAnson.vscode-markdownlint",
+    ]
+}
