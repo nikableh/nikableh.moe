@@ -19,7 +19,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <article>
+    <article class="max-w-full">
         <ContentRenderer :value="data!" />
     </article>
 </template>

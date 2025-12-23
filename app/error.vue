@@ -13,7 +13,7 @@ const props = defineProps<{ error: NuxtError }>();
                 boingo! The code monkeys at our headquarters are working VEWY
                 HAWD to fix this!
             </p>
-            <ProseA to="/">Go back home</ProseA>
+            <ProseA href="/">Go back home</ProseA>
         </div>
     </NuxtLayout>
 </template>

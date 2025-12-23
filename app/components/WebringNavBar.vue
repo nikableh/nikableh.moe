@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full">
-        <ul class="flex justify-between pb-2 px-4 gap-5">
+        <ul class="flex justify-between pb-2 px-4 gap-5 flex-wrap">
             <li>
                 <NuxtLink
                     to="https://webring.otomir23.me/nikableh/prev"
