@@ -43,4 +43,31 @@ export default defineNuxtConfig({
       ],
     }
   },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: [
+            'c',
+            'cpp',
+            'rust',
+            'python',
+            'json',
+            'js',
+            'ts',
+            'html',
+            'css',
+            'vue',
+            'shell',
+            'mdc',
+            'md',
+            'yaml',
+          ]
+        }
+      }
+    }
+  }
+
 })
