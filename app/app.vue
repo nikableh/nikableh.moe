@@ -1,6 +1,5 @@
 <template>
-    <section class="bg-yetdarker h-full text-bodily flex flex-col items-center">
-        <WipRibbon />
+    <NuxtLayout>
         <NuxtPage />
-    </section>
+    </NuxtLayout>
 </template>
