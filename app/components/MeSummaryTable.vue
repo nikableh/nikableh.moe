@@ -1,42 +1,18 @@
 <script setup lang="ts">
 import confetti from "canvas-confetti";
 
-function createBirthday(day: number, month: number, year: number): Date {
-    // Month in JavaScript Date is 0-based (0 = January, 11 = December)
-    return new Date(year, month - 1, day);
-}
-
-function calculateAge(birthDate: Date): number {
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (
-        monthDiff < 0 ||
-        (monthDiff === 0 && today.getDate() < birthDate.getDate())
-    ) {
-        age--;
-    }
-
-    return age;
-}
-
-function isTodayMyBirthday(birthDate: Date): boolean {
-    const today = new Date();
-
-    return (
-        today.getMonth() === birthDate.getMonth() &&
-        today.getDate() === birthDate.getDate()
-    );
-}
-
-const birthDate = createBirthday(1, 8, 2004);
-const isBirthday = ref(isTodayMyBirthday(birthDate));
-const age = ref(calculateAge(birthDate));
+const { isBirthday, age } = useBirthday();
 
 onMounted(() => {
     if (isBirthday) {
-        const colors: string[] = ["#f2f641", "#f5a02c", "#25c4f5", "#83f658", "#cd32ce", "#f55c7b", ];
+        const colors: string[] = [
+            "#f2f641",
+            "#f5a02c",
+            "#25c4f5",
+            "#83f658",
+            "#cd32ce",
+            "#f55c7b",
+        ];
 
         function randomInRange(min: number, max: number) {
             return Math.random() * (max - min) + min;
