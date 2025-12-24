@@ -5,7 +5,7 @@
 
 A burned-out Systems Programmer, a trans girl and a huge dum-dum.
 
-Fueled by estradiol, vortioxetine, and, occasionally, a cherry-flavored beer.
+Fueled by estrogen, vortioxetine, and, occasionally, a cherry-flavored beer.
 
 ## My badge
 
