@@ -1,6 +1,10 @@
 <template>
     <h1 :id="props.id" class="text-3xl flex font-bold pb-3 pt-5">
-        <a v-if="generate" :href="`#${props.id}`">
+        <a
+            v-if="generate"
+            :href="`#${props.id}`"
+            class="transition-transform duration-75 ease-out active:scale-90"
+        >
             <span class="mr-2 select-none">#</span>
             <slot />
         </a>
