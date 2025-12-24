@@ -51,6 +51,11 @@
             alt="devilreef's 88x31 badge"
         />
         <Badge88x31
+            website="https://asyasocute.online/"
+            image="https://asyasocute.online/badges/cowl.png"
+            alt="asya's 88x31 badge"
+        />
+        <Badge88x31
             website="https://puppy.support/"
             image="https://puppy.support/88x31/shutup.gif"
             alt="oljoi's 88x31 badge"
