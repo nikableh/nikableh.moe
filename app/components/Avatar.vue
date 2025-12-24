@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import confetti from "canvas-confetti";
 
-const scalar = ref(3);
-
 function bleh(e: PointerEvent) {
+    const scalar = 3;
+
     let normX = e.clientX / window.innerWidth;
     let normY = e.clientY / window.innerHeight;
 
@@ -16,13 +16,13 @@ function bleh(e: PointerEvent) {
             confetti.shapeFromText({
                 text: "bleh",
                 color: "#FFFFFF",
-                scalar: scalar.value,
+                scalar: scalar,
                 fontFamily: "Maple Mono",
             }),
         ],
         particleCount: 1,
         flat: true,
-        scalar: scalar.value,
+        scalar: scalar,
         origin: { x: normX, y: normY },
     });
 }

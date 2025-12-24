@@ -26,14 +26,29 @@
             alt="keet's 88x31 badge"
         />
         <Badge88x31
-            website="https://puppy.support/"
-            image="https://puppy.support/88x31/shutup.gif"
-            alt="oljoi's 88x31 badge"
+            website="https://senko.dev/"
+            image="https://senko.dev/banners/senko.gif"
+            alt="senkodev's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://jsopn.com/"
+            image="https://jsopn.com/images/88x31/button.gif"
+            alt="jsopn's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://tei.su/"
+            image="https://tei.su/88x31/teidesu.png"
+            alt="alina's 88x31 badge"
         />
         <Badge88x31
             website="https://preview.about.akarpov.ru/"
-            image="/88x31-unknown.png"
+            image="https://akarpov.ru/media/benis.gif"
             alt="sanspie's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://puppy.support/"
+            image="https://puppy.support/88x31/shutup.gif"
+            alt="oljoi's 88x31 badge"
         />
         <Badge88x31
             website="https://femboy.page/"
