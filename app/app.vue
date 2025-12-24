@@ -1,6 +1,8 @@
 <template>
     <NuxtLayout>
         <NuxtPage />
-        <BirthdayConfetti />
+        <ClientOnly>
+            <BirthdayConfetti />
+        </ClientOnly>
     </NuxtLayout>
 </template>
