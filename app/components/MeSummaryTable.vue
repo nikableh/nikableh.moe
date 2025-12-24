@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import confetti from "canvas-confetti";
+
 function createBirthday(day: number, month: number, year: number): Date {
     // Month in JavaScript Date is 0-based (0 = January, 11 = December)
     return new Date(year, month - 1, day);
@@ -19,8 +21,46 @@ function calculateAge(birthDate: Date): number {
     return age;
 }
 
-const birthday = createBirthday(1, 8, 2004);
-const age = ref(calculateAge(birthday));
+function isTodayMyBirthday(birthDate: Date): boolean {
+    const today = new Date();
+
+    return (
+        today.getMonth() === birthDate.getMonth() &&
+        today.getDate() === birthDate.getDate()
+    );
+}
+
+const birthDate = createBirthday(1, 8, 2004);
+const isBirthday = ref(isTodayMyBirthday(birthDate));
+const age = ref(calculateAge(birthDate));
+
+onMounted(() => {
+    if (isBirthday) {
+        const colors: string[] = ["#f2f641", "#f5a02c", "#25c4f5", "#83f658", "#cd32ce", "#f55c7b", ];
+
+        function randomInRange(min: number, max: number) {
+            return Math.random() * (max - min) + min;
+        }
+
+        (function frame() {
+            confetti({
+                particleCount: 1,
+                startVelocity: 0,
+                colors: [colors[Math.floor(Math.random() * colors.length)]!],
+                ticks: 50,
+                origin: {
+                    x: Math.random(),
+                    y: Math.random() * 0.8 - 0.2,
+                },
+                gravity: randomInRange(0.4, 0.6),
+                scalar: randomInRange(0.4, 1),
+                drift: randomInRange(-0.4, 0.4),
+            });
+
+            requestAnimationFrame(frame);
+        })();
+    }
+});
 </script>
 
 <template>
