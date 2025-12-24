@@ -31,13 +31,13 @@ const { isBirthday } = useBirthday();
 </script>
 
 <template>
-    <div class="select-none flex flex-col justify-center items-center gap-5">
+    <div class="select-none flex flex-col justify-center items-center">
         <img
             v-if="isBirthday"
             src="/party-hat.png"
             alt="party hat"
             width="80px"
-            class="relative -left-3.25 top-3 -rotate-7 scale-150 pointer-events-none"
+            class="relative -left-3.75 -top-3.5 -rotate-7 scale-150 pointer-events-none pt-5"
             draggable="false"
         />
         <div class="cursor-pointer" @pointerup="bleh">
@@ -49,6 +49,16 @@ const { isBirthday } = useBirthday();
                 loading="eager"
                 fetch-priority="high"
             />
+        </div>
+        <div class="relative w-25">
+            <img
+            v-if="isBirthday"
+            src="/cake-is-a-lie.png"
+            alt="party hat"
+            width="80px"
+            class="absolute left-24 -top-20 rotate-10 scale-150 pointer-events-none"
+            draggable="false"
+        />
         </div>
     </div>
 </template>
