@@ -32,7 +32,7 @@ const { isBirthday } = useBirthday();
 
 <template>
     <div
-        class="select-none flex flex-col justify-center items-center not-prose gap-5"
+        class="select-none flex flex-col justify-center items-center gap-5"
     >
         <img
             v-if="isBirthday"
