@@ -31,15 +31,13 @@ const { isBirthday } = useBirthday();
 </script>
 
 <template>
-    <div
-        class="select-none flex flex-col justify-center items-center gap-5"
-    >
+    <div class="select-none flex flex-col justify-center items-center gap-5">
         <img
             v-if="isBirthday"
             src="/party-hat.png"
             alt="party hat"
             width="80px"
-            class="relative -left-3.25 top-3 -rotate-7 scale-150"
+            class="relative -left-3.25 top-3 -rotate-7 scale-150 pointer-events-none"
             draggable="false"
         />
         <div class="cursor-pointer" @pointerup="bleh">
