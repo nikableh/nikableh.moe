@@ -13,6 +13,13 @@ const props = defineProps<{
             height="31"
             :src="image"
             :alt="props.alt"
+            class="badge"
         />
     </NuxtLink>
 </template>
+
+<style lang="css" scoped>
+.badge {
+    image-rendering: pixelated;
+}
+</style>
