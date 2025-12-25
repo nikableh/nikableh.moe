@@ -8,12 +8,11 @@ const props = defineProps<{
 
 <template>
     <NuxtLink :to="props.website" class="select-none inline-block m-1">
-        <NuxtImg
+        <img
             width="88"
             height="31"
             :src="image"
             :alt="props.alt"
-            placeholder
         />
     </NuxtLink>
 </template>

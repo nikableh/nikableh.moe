@@ -28,6 +28,17 @@ function bleh(e: PointerEvent) {
 }
 
 const { isBirthday } = useBirthday();
+
+useHead({
+    link: [
+        {
+            rel: "preload",
+            href: "/nikableh.png",
+            as: "image",
+            fetchpriority: "high",
+        },
+    ],
+});
 </script>
 
 <template>
@@ -44,7 +55,8 @@ const { isBirthday } = useBirthday();
             <img
                 src="/nikableh.png"
                 alt="nikableh's profile picture"
-                width="200px"
+                width="200"
+                height="200"
                 draggable="false"
                 loading="eager"
                 fetch-priority="high"
@@ -52,13 +64,13 @@ const { isBirthday } = useBirthday();
         </div>
         <div class="relative w-25">
             <img
-            v-if="isBirthday"
-            src="/cake-is-a-lie.png"
-            alt="party hat"
-            width="80px"
-            class="absolute left-24 -top-20 rotate-10 scale-150 pointer-events-none"
-            draggable="false"
-        />
+                v-if="isBirthday"
+                src="/cake-is-a-lie.png"
+                alt="party hat"
+                width="80px"
+                class="absolute left-24 -top-20 rotate-10 scale-150 pointer-events-none"
+                draggable="false"
+            />
         </div>
     </div>
 </template>
