@@ -17,7 +17,7 @@ Fueled by estrogen, vortioxetine, and, occasionally, a cherry-flavored beer.
 ::Badge88x31
 ---
 website: https://nikableh.moe
-image: https://nikableh.moe/88x31.png
+image: /88x31.png
 alt: nikableh's 88x31 badge
 ---
 ::

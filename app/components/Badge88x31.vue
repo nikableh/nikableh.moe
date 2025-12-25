@@ -13,8 +13,7 @@ const props = defineProps<{
             height="31"
             :src="image"
             :alt="props.alt"
-            placeholder="/88x31-unknown.png"
-            loading="lazy"
+            placeholder
         />
     </NuxtLink>
 </template>
