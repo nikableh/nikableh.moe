@@ -28,3 +28,6 @@ logs
 
 # PNPM
 pnpm-lock.yaml
+
+# GoogleChrome/lighthouse-ci
+.lighthouseci

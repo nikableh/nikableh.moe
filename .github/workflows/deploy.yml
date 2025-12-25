@@ -16,27 +16,34 @@ jobs:
       - name: Enter nix devShell
         uses: nicknovitski/nix-develop@v1
       - run: nix flake check
-      - run: npm install
+      - run: pnpm install
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
-  # Deployment job
+
   deploy:
-    # Add a dependency to the build job
     needs: build
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
-    # Deploy to the github_pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  lhci:
+    name: Lighthouse
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run Lighthouse CI against deployed site
+        run: |
+          npx @lhci/cli autorun \
+            --collect.url=https://nikableh.moe/

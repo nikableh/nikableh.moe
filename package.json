@@ -8,9 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "clean": "nuxt cleanup",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lhci": "lhci"
   },
   "dependencies": {
+    "@lhci/cli": "0.15.1",
     "@nuxt/content": "^3.9.0",
     "@nuxt/fonts": "^0.12.1",
     "@nuxt/image": "^2.0.0",
