@@ -75,5 +75,26 @@ useHead({
                 draggable="false"
             />
         </div>
+        <span
+            v-if="isBirthday"
+            class="pulse relative text-shadow-lg scale-150 pointer-events-none pt-6 pb-1"
+        >
+            IT'S MY BIRTHDAY!
+        </span>
     </div>
 </template>
+
+<style lang="css" scoped>
+.pulse {
+    animation: zoomPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+  0%, 100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+</style>
