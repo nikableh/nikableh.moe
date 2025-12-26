@@ -1,5 +1,5 @@
 ---
-title: nikableh.moe
+title: nikableh
 description: nikableh's website
 ---
 
@@ -8,7 +8,7 @@ description: nikableh's website
 
 ## About me
 
-A burned-out Systems Programmer, a trans girl and a huge dum-dum.
+A burned-out systems programmer, a trans girl and a huge dum-dum.
 
 Fueled by estrogen, vortioxetine, and, occasionally, a cherry-flavored beer.
 

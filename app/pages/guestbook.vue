@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-    title: "Guestbook",
+    title: "nikableh | Guestbook",
     description: "Guestbook of the nikableh.moe website",
 });
 </script>
@@ -19,6 +19,6 @@ useSeoMeta({
         inputPosition="top"
         theme="gruvbox_dark"
         lang="en"
-        loading="lazy"
+        loading="eager"
     />
 </template>

@@ -32,6 +32,16 @@ export default defineNuxtConfig({
         lang: 'en',
         dir: 'ltr',
       },
+      link: [
+        {
+          rel: "preconnect",
+          href: "https://giscus.app",
+        },
+        {
+          rel: "dns-prefetch",
+          href: "https://giscus.app",
+        },
+      ],
       meta: [
         { name: "description", content: "nikableh's website" },
         { name: "theme-color", content: "#171717" },
