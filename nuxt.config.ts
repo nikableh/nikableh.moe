@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/image', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc'],
 
-  css: ['~/assets/css/global.css'],
+  css: ['~/assets/css/main.css'],
 
   vite: {
     plugins: [
