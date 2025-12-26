@@ -3,7 +3,7 @@
         <a
             v-if="generate"
             :href="`#${props.id}`"
-            class="transition-transform duration-75 ease-out active:scale-90"
+            class="squish"
         >
             <span class="mr-2 select-none">#</span>
             <slot />

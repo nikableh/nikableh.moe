@@ -19,3 +19,7 @@ html, body {
     background-color: var(--color-yetdarker);
     color: var(--color-bodily);
 }
+
+.squish {
+    @apply transition-transform duration-75 ease-out active:scale-90
+}
