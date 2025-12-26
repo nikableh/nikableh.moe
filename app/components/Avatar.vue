@@ -42,6 +42,9 @@ useHead({
 </script>
 
 <template>
+    <ClientOnly>
+        <BirthdayConfetti />
+    </ClientOnly>
     <div class="select-none flex flex-col justify-center items-center">
         <img
             v-if="isBirthday"
