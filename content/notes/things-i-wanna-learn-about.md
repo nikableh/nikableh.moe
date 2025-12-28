@@ -15,3 +15,23 @@ thing, but it does imply I want to deepen my understanding about it.
 This is a living document and it (1) will be updated from time to time and (2) I
 may or may not include links from here to other notes.
 ::
+
+::note
+wha
+::
+
+::note
+This is a list of This is a list of This is a list of This is a list of This is a list of 
+::
+
+::note
+This is a list of topics, technologies or just _things_ I might have head of
+somewhere and want to learn more about.
+
+```rust
+//  this is a very long line wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa wa 
+```
+
+This is a list of topics, technologies or just _things_ I might have head of
+somewhere and want to learn more about.
+::
