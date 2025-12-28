@@ -38,7 +38,7 @@ defineProps({
 @reference "~/assets/css/main.css";
 
 .pre {
-    @apply w-full overflow-x-auto min-w-0 block text-sm;
+    @apply w-full overflow-x-auto min-w-0 block text-sm my-3;
 }
 
 .pre .code {
