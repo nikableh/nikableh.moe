@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const route = useRoute();
-
 const { data } = await useAsyncData(() =>
     queryCollection("content").path("/").first()
 );
@@ -19,7 +17,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <article class="w-full  ">
+    <article class="w-full">
         <ContentRenderer :value="data!" />
     </article>
 </template>
