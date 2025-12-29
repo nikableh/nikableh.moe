@@ -6,12 +6,21 @@ description: Things I want to learn (more) about
 # Things I want to learn (more) about
 
 ::callout-note
-This is a list of topics, technologies or just _things_ I might have head of
-somewhere and want to learn more about.
+This is a list of topics, technologies or just _things_ I want to learn more
+about.
 
-Having something here doesn't necessarily mean I don't know anything about said
-thing, but it does imply I want to deepen my understanding about it.
+I doesn't necessarily mean I don't know _anything_ about said
+thing, but it does imply I want to deepen my understanding about the topic.
 
-This is a living document and it (1) will be updated from time to time and (2) I
-may or may not include links from here to other notes.
+This is a living document and it will be updated from time to time.
 ::
+
+- NUMA
+- The boot process of a PC _(from pressing the power button to starting PID 1)_
+- eBPF
+- DPDK _(at least write a "Hello, World" in it)_
+- Memory mapping and `mmap()`
+- Zombie processes
+
+Weird, it feels like there were a lot more things that I can't remember right
+now...
