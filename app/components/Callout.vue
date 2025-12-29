@@ -41,12 +41,14 @@ const iconColorClass = computed(() => variants[color].icon);
         :class="calloutColorClass"
         class="border justify-center px-3 pt-0 rounded-2xl flex gap-3 text-sm w-full my-4"
     >
-        <Icon
-            v-if="icon"
-            :name="icon"
-            :class="iconColorClass"
-            class="text-2xl my-3 shrink-0"
-        />
+        <ProseP>
+            <Icon
+                v-if="icon"
+                :name="icon"
+                :class="iconColorClass"
+                class="text-2xl shrink-0"
+            />
+        </ProseP>
         <div class="w-full min-w-0 self-center">
             <slot />
         </div>
