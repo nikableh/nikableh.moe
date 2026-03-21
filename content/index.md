@@ -8,7 +8,7 @@ description: nikableh's website
 
 ## About me
 
-A burned-out systems programmer, a trans girl and a huge dum-dum.
+A systems programmer, a trans girl and a huge dum-dum.
 
 Fueled by estrogen, vortioxetine, and, occasionally, a cherry-flavored beer.
 
