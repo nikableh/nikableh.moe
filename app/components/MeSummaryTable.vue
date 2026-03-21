@@ -8,7 +8,7 @@ const { age } = useBirthday();
     >
         <div class="grid grid-cols-[auto_auto] gap-x-7 w-max whitespace-pre overflow-x-auto">
             <span>Location:</span>
-            <p>Moscow, Russia</p>
+            <p>Novi Sad, Serbia</p>
 
             <span>Gender:</span>
             <p>she/her 🏳️‍⚧️</p>

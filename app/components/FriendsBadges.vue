@@ -11,6 +11,9 @@ import oljoi from "~/assets/img/88x31/oljoi.gif";
 import polina4096 from "~/assets/img/88x31/polina4096.png";
 import sanspie from "~/assets/img/88x31/sanspie.gif";
 import senkodev from "~/assets/img/88x31/senkodev.gif";
+import kravets from "~/assets/img/88x31/kravets.gif";
+import aria from "~/assets/img/88x31/aria.gif";
+import glutesha from "~/assets/img/88x31/glutesha.png";
 </script>
 
 <template>
@@ -74,6 +77,21 @@ import senkodev from "~/assets/img/88x31/senkodev.gif";
             website="https://puppy.support/"
             :image="oljoi"
             alt="oljoi's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://kravets.wtf/"
+            :image="kravets"
+            alt="kravets's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://aria.florenko.moe/"
+            :image="aria"
+            alt="aria's 88x31 badge"
+        />
+        <Badge88x31
+            website="https://glutesha.ru/"
+            :image="glutesha"
+            alt="glutesha's 88x31 badge"
         />
     </section>
 </template>
