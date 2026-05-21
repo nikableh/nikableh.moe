@@ -45,16 +45,16 @@ useHead({
     <ClientOnly>
         <BirthdayConfetti />
     </ClientOnly>
-    <div class="select-none flex flex-col justify-center items-center">
-        <img
-            v-if="isBirthday"
-            src="/party-hat.png"
-            alt="party hat"
-            width="80px"
-            class="relative -left-3.75 -top-3.5 -rotate-7 scale-150 pointer-events-none pt-5"
-            draggable="false"
-        />
-        <div class="cursor-pointer" @pointerup="bleh">
+    <div class="select-none flex flex-col justify-center items-center" :class="{ 'pt-15': isBirthday }">
+        <div class="relative cursor-pointer" @pointerup="bleh">
+            <img
+                v-if="isBirthday"
+                src="/party-hat.png"
+                alt="party hat"
+                width="80px"
+                class="absolute left-1/2 -translate-x-[20px] -top-[62px] rotate-5 scale-75 pointer-events-none z-10"
+                draggable="false"
+            />
             <img
                 src="/nikableh.png"
                 alt="nikableh's profile picture"
@@ -77,9 +77,9 @@ useHead({
         </div>
         <span
             v-if="isBirthday"
-            class="pulse relative text-shadow-lg scale-150 pointer-events-none pt-6 pb-1"
+            class="pulse relative text-shadow-lg scale-150 pointer-events-none pt-7 pb-1"
         >
-            IT'S MY BIRTHDAY!
+            TODAY'S MY BIRTHDAY!
         </span>
     </div>
 </template>
