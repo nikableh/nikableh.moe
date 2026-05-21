@@ -10,7 +10,7 @@ description: nikableh's website
 
 A systems programmer and a huge dum-dum.
 
-Fueled by estrogen, vortioxetine, and, occasionally, a cherry-flavored beer.
+Fueled by estrogen, <span style="cursor: help; text-decoration: underline dotted; text-underline-offset: 3px;" title="Serbia doesn't have Britntellix smh"><s>vortioxetine</s></span>, and, occasionally, a cherry-flavored beer.
 
 ## My badge
 
