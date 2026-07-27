@@ -2,7 +2,7 @@
   description = "Development environment for the project";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -18,7 +18,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        formatter = pkgs.nixfmt-rfc-style;
+        formatter = pkgs.nixfmt;
 
         devShells.default = pkgs.mkShell {
           buildInputs = [
