@@ -13,6 +13,8 @@ const props = defineProps<{
             height="31"
             :src="image"
             :alt="props.alt"
+            loading="lazy"
+            decoding="async"
             class="badge"
         />
     </NuxtLink>
