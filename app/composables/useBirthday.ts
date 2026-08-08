@@ -3,8 +3,7 @@ function createBirthday(day: number, month: number, year: number): Date {
   return new Date(year, month - 1, day);
 }
 
-function calculateAge(birthDate: Date): number {
-  const today = new Date();
+function calculateAge(birthDate: Date, today: Date): number {
   let age = today.getFullYear() - birthDate.getFullYear();
 
   const monthDiff = today.getMonth() - birthDate.getMonth();
@@ -18,9 +17,7 @@ function calculateAge(birthDate: Date): number {
   return age;
 }
 
-function isTodayMyBirthday(birthDate: Date): boolean {
-  const today = new Date();
-
+function isTodayMyBirthday(birthDate: Date, today: Date): boolean {
   return (
     today.getMonth() === birthDate.getMonth() &&
     today.getDate() === birthDate.getDate()
@@ -28,9 +25,20 @@ function isTodayMyBirthday(birthDate: Date): boolean {
 }
 
 export const useBirthday = () => {
-  const birthDate = ref(createBirthday(1, 8, 2004));
-  const isBirthday = ref(isTodayMyBirthday(birthDate.value));
-  const age = ref(calculateAge(birthDate.value));
+  const birthDate = createBirthday(1, 8, 2004);
 
-  return { birthDate, isBirthday, age }
-}
+  // Prerendering freezes the server clock at build time, so it has to reach
+  // the client through the payload. Reading it on both sides instead pits a
+  // stale server value against a live client one.
+  const now = useState("birthday-now", () => Date.now());
+
+  onMounted(() => {
+    now.value = Date.now();
+  });
+
+  const today = computed(() => new Date(now.value));
+  const isBirthday = computed(() => isTodayMyBirthday(birthDate, today.value));
+  const age = computed(() => calculateAge(birthDate, today.value));
+
+  return { birthDate, isBirthday, age };
+};
