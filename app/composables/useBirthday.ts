@@ -25,7 +25,7 @@ function isTodayMyBirthday(birthDate: Date, today: Date): boolean {
 }
 
 export const useBirthday = () => {
-  const birthDate = createBirthday(1, 8, 2004);
+  const birthDate = createBirthday(27, 9, 2004);
 
   // Prerendering freezes the server clock at build time, so it has to reach
   // the client through the payload. Reading it on both sides instead pits a
