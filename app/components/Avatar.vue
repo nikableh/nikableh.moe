@@ -54,14 +54,16 @@ useHead({
                 class="absolute left-1/2 -translate-x-[20px] -top-[62px] rotate-5 scale-75 pointer-events-none z-10"
                 draggable="false"
             />
+            <!-- Tailwind's preflight sets height:auto, so these have to
+                 match the file's own ratio or the box resizes on decode. -->
             <img
                 src="/nikableh.png"
                 alt="nikableh's profile picture"
                 width="200"
-                height="200"
+                height="259"
                 draggable="false"
                 loading="eager"
-                fetch-priority="high"
+                fetchpriority="high"
             />
         </div>
         <div class="relative w-25">
