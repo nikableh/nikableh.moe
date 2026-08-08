@@ -46,6 +46,12 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+
+    build: {
+      // Inlined assets land in the prerendered HTML, which is render-blocking;
+      // base64 also costs a third more bytes than the file it replaces.
+      assetsInlineLimit: 0,
+    },
   },
 
   fonts: {
