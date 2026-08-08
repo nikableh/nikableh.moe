@@ -9,6 +9,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  routeRules: {
+    '/site.webmanifest': { prerender: true },
+  },
+
   vite: {
     plugins: [
       tailwindcss(),
