@@ -54,7 +54,7 @@ import glutesha from "~/assets/img/88x31/glutesha.png";
             alt="jsopn's 88x31 badge"
         />
         <Badge88x31
-            website="https://tei.su/"
+            website="https://tei.pet/"
             :image="alina"
             alt="alina's 88x31 badge"
         />
