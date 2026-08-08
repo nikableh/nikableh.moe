@@ -32,15 +32,15 @@ const { isBirthday } = useBirthday();
 useBirthdayConfetti();
 
 // The 200x259 slot needs 400x518 to look right on a 2x screen, and that copy
-// is 41KB against the full file's 940KB. So the paint waits on the small one
-// and the full-resolution file lands on top of it afterwards: same box, same
-// position, out of flow, so nothing moves and nothing before it is delayed.
-// Chrome only re-reports LCP for a paint larger than the last one, so the
-// second image does not push the metric out either.
+// is 41KB against the original's 1.6MB. So the paint waits on the small one
+// and the original lands on top of it afterwards: same box, same position,
+// out of flow, so nothing moves and nothing before it is delayed. Chrome only
+// re-reports LCP for a paint larger than the last one, so the second image
+// does not push the metric out either.
 const fullResolution = ref<string | null>(null);
 
 onMounted(() => {
-    // 940KB to sharpen an image already sharp below 3x is not a trade to make
+    // 1.6MB to sharpen an image already sharp below 3x is not a trade to make
     // on someone's metered connection. connection is not in lib.dom yet.
     const { connection } = navigator as Navigator & {
         connection?: { saveData?: boolean };
@@ -50,7 +50,7 @@ onMounted(() => {
 
     const upgrade = () => {
         const image = new Image();
-        image.src = "/nikableh.webp";
+        image.src = "/nikableh.png";
 
         // Handing the <img> an already-decoded frame keeps the swap from
         // blanking for a frame while it decodes two megapixels.
