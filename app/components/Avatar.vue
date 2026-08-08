@@ -31,11 +31,54 @@ const { isBirthday } = useBirthday();
 
 useBirthdayConfetti();
 
+// The 200x259 slot needs 400x518 to look right on a 2x screen, and that copy
+// is 41KB against the full file's 940KB. So the paint waits on the small one
+// and the full-resolution file lands on top of it afterwards: same box, same
+// position, out of flow, so nothing moves and nothing before it is delayed.
+// Chrome only re-reports LCP for a paint larger than the last one, so the
+// second image does not push the metric out either.
+const fullResolution = ref<string | null>(null);
+
+onMounted(() => {
+    // 940KB to sharpen an image already sharp below 3x is not a trade to make
+    // on someone's metered connection. connection is not in lib.dom yet.
+    const { connection } = navigator as Navigator & {
+        connection?: { saveData?: boolean };
+    };
+
+    if (connection?.saveData) return;
+
+    const upgrade = () => {
+        const image = new Image();
+        image.src = "/nikableh.webp";
+
+        // Handing the <img> an already-decoded frame keeps the swap from
+        // blanking for a frame while it decodes two megapixels.
+        image
+            .decode()
+            .catch(() => {})
+            .then(() => {
+                fullResolution.value = image.src;
+            });
+    };
+
+    const whenIdle = () =>
+        window.requestIdleCallback
+            ? requestIdleCallback(upgrade, { timeout: 2000 })
+            : setTimeout(upgrade, 500);
+
+    if (document.readyState === "complete") {
+        whenIdle();
+    } else {
+        window.addEventListener("load", whenIdle, { once: true });
+    }
+});
+
 useHead({
     link: [
         {
             rel: "preload",
-            href: "/nikableh.webp",
+            href: "/nikableh-400.webp",
             as: "image",
             type: "image/webp",
             fetchpriority: "high",
@@ -59,13 +102,25 @@ useHead({
             <!-- Tailwind's preflight sets height:auto, so these have to
                  match the file's own ratio or the box resizes on decode. -->
             <img
-                src="/nikableh.webp"
+                src="/nikableh-400.webp"
                 alt="nikableh's profile picture"
                 width="200"
                 height="259"
                 draggable="false"
                 loading="eager"
                 fetchpriority="high"
+            />
+            <!-- h-full rather than the ratio trick above: this one has to cover
+                 the copy underneath exactly, down to the last subpixel. -->
+            <img
+                v-if="fullResolution"
+                :src="fullResolution"
+                alt=""
+                aria-hidden="true"
+                width="200"
+                height="259"
+                class="absolute inset-0 h-full w-full"
+                draggable="false"
             />
         </div>
         <div class="relative w-25">
