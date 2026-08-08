@@ -29,6 +29,8 @@ function bleh(e: PointerEvent) {
 
 const { isBirthday } = useBirthday();
 
+useBirthdayConfetti();
+
 useHead({
     link: [
         {
@@ -42,9 +44,6 @@ useHead({
 </script>
 
 <template>
-    <ClientOnly>
-        <BirthdayConfetti />
-    </ClientOnly>
     <div class="select-none flex flex-col justify-center items-center" :class="{ 'pt-15': isBirthday }">
         <div class="relative cursor-pointer" @pointerup="bleh">
             <img
