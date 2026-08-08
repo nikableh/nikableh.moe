@@ -49,9 +49,10 @@ useHead({
         <div class="relative cursor-pointer" @pointerup="bleh">
             <img
                 v-if="isBirthday"
-                src="/party-hat.png"
+                src="/party-hat.webp"
                 alt="party hat"
-                width="80px"
+                width="80"
+                height="109"
                 class="absolute left-1/2 -translate-x-[20px] -top-[62px] rotate-5 scale-75 pointer-events-none z-10"
                 draggable="false"
             />
@@ -70,9 +71,10 @@ useHead({
         <div class="relative w-25">
             <img
                 v-if="isBirthday"
-                src="/cake-is-a-lie.png"
-                alt="party hat"
-                width="80px"
+                src="/cake-is-a-lie.webp"
+                alt="the cake is a lie"
+                width="80"
+                height="77"
                 class="absolute left-24 -top-20 rotate-10 scale-150 pointer-events-none"
                 draggable="false"
             />
