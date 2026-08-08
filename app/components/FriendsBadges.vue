@@ -4,15 +4,12 @@ import asya from "~/assets/img/88x31/asya.png";
 import catboybinary from "~/assets/img/88x31/catboybinary.png";
 import cesarean from "~/assets/img/88x31/cesarean.png";
 import damir from "~/assets/img/88x31/damir.png";
-import devilreef from "~/assets/img/88x31/devilreef.png";
 import jsopn from "~/assets/img/88x31/jsopn.gif";
 import keet from "~/assets/img/88x31/keet.png";
-import oljoi from "~/assets/img/88x31/oljoi.gif";
 import polina4096 from "~/assets/img/88x31/polina4096.png";
 import sanspie from "~/assets/img/88x31/sanspie.gif";
 import senkodev from "~/assets/img/88x31/senkodev.gif";
 import kravets from "~/assets/img/88x31/kravets.gif";
-import aria from "~/assets/img/88x31/aria.gif";
 import glutesha from "~/assets/img/88x31/glutesha.png";
 </script>
 
@@ -64,29 +61,14 @@ import glutesha from "~/assets/img/88x31/glutesha.png";
             alt="sanspie's 88x31 badge"
         />
         <Badge88x31
-            website="https://femboy.page/"
-            :image="devilreef"
-            alt="devilreef's 88x31 badge"
-        />
-        <Badge88x31
             website="https://asyasocute.online/"
             :image="asya"
             alt="asya's 88x31 badge"
         />
         <Badge88x31
-            website="https://puppy.support/"
-            :image="oljoi"
-            alt="oljoi's 88x31 badge"
-        />
-        <Badge88x31
             website="https://kravets.wtf/"
             :image="kravets"
             alt="kravets's 88x31 badge"
-        />
-        <Badge88x31
-            website="https://aria.florenko.moe/"
-            :image="aria"
-            alt="aria's 88x31 badge"
         />
         <Badge88x31
             website="https://glutesha.ru/"
