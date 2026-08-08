@@ -13,9 +13,6 @@
             <li class="squish border flex-1 whitespace-nowrap font-bold">
                 <NuxtLink class="block w-full p-1 px-3" active-class="text-red-400" href="/notes">Notes</NuxtLink>
             </li>
-            <li class="squish border flex-1 whitespace-nowrap font-bold">
-                <NuxtLink class="block w-full p-1 px-3" active-class="text-red-400" href="/guestbook">Guestbook</NuxtLink>
-            </li>
         </ul>
     </nav>
 </template>
