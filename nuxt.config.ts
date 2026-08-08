@@ -13,6 +13,35 @@ export default defineNuxtConfig({
     '/site.webmanifest': { prerender: true },
   },
 
+  hooks: {
+    'build:manifest'(manifest) {
+      for (const entry of Object.values(manifest)) {
+        // Nuxt prefetches every image a route's chunks reference. The friend
+        // badges sit below the fold behind loading="lazy", so those hints only
+        // steal bandwidth from the LCP image on first paint.
+        if (entry.resourceType === 'image') {
+          entry.prefetch = false
+        }
+
+        // Same story for the hydration chunks: modulepreload puts all fifteen
+        // of them in the head at high priority, ahead of the stylesheet and
+        // the avatar. The entry script tag still pulls them in, one round
+        // trip later, which nothing on the page waits for. Dropping the hint
+        // also drops the other routes' prefetches, which is the price.
+        if (entry.resourceType === 'script') {
+          entry.preload = false
+
+          // The renderer drops a prefetch hint only for chunks it already
+          // preloads, so the entry has to be excluded by hand now that
+          // nothing preloads it — otherwise it downloads twice.
+          if (entry.isEntry) {
+            entry.prefetch = false
+          }
+        }
+      }
+    },
+  },
+
   vite: {
     plugins: [
       tailwindcss(),
