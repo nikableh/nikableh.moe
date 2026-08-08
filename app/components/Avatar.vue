@@ -35,8 +35,9 @@ useHead({
     link: [
         {
             rel: "preload",
-            href: "/nikableh.png",
+            href: "/nikableh.webp",
             as: "image",
+            type: "image/webp",
             fetchpriority: "high",
         },
     ],
@@ -57,7 +58,7 @@ useHead({
             <!-- Tailwind's preflight sets height:auto, so these have to
                  match the file's own ratio or the box resizes on decode. -->
             <img
-                src="/nikableh.png"
+                src="/nikableh.webp"
                 alt="nikableh's profile picture"
                 width="200"
                 height="259"
