@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
-  modules: ['@nuxt/image', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc', '@nuxt/icon'],
+  modules: ['@nuxt/image', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc', '@nuxt/icon', 'nuxt-llms'],
 
   css: ['~/assets/css/main.css'],
 
@@ -53,6 +53,16 @@ export default defineNuxtConfig({
         { name: "color-scheme", content: "dark" },
       ],
     }
+  },
+
+  llms: {
+    domain: 'https://nikableh.moe',
+    title: 'nikableh.moe',
+    description: "nikableh's website",
+    full: {
+      title: 'nikableh.moe, full contents',
+      description: "The full text of every page on nikableh's website",
+    },
   },
 
   content: {
