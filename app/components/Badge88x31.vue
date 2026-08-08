@@ -7,7 +7,11 @@ const props = defineProps<{
 </script>
 
 <template>
-    <NuxtLink :to="props.website" class="select-none inline-block m-1">
+    <a
+        :href="props.website"
+        rel="noopener noreferrer"
+        class="select-none inline-block m-1"
+    >
         <img
             width="88"
             height="31"
@@ -17,7 +21,7 @@ const props = defineProps<{
             decoding="async"
             class="badge"
         />
-    </NuxtLink>
+    </a>
 </template>
 
 <style lang="css" scoped>
