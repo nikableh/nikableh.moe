@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { site } from "./shared/site";
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "nikableh.moe",
+      title: site.name,
       charset: 'UTF-8',
       viewport: 'width=device-width, initial-scale=1, user-scalable=yes',
       htmlAttrs: {
@@ -40,20 +41,20 @@ export default defineNuxtConfig({
         { rel: "manifest", href: "/site.webmanifest" },
       ],
       meta: [
-        { name: "description", content: "nikableh's website" },
-        { name: "theme-color", content: "#171717" },
+        { name: "description", content: site.description },
+        { name: "theme-color", content: site.themeColor },
         { name: "color-scheme", content: "dark" },
       ],
     }
   },
 
   llms: {
-    domain: 'https://nikableh.moe',
-    title: 'nikableh.moe',
-    description: "nikableh's website",
+    domain: site.url,
+    title: site.name,
+    description: site.description,
     full: {
-      title: 'nikableh.moe, full contents',
-      description: "The full text of every page on nikableh's website",
+      title: `${site.name}, full contents`,
+      description: `The full text of every page on ${site.name}`,
     },
   },
 
