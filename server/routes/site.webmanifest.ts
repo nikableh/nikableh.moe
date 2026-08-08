@@ -13,6 +13,6 @@ export default defineEventHandler((event) => {
         ],
         theme_color: site.themeColor,
         background_color: site.themeColor,
-        display: "standalone",
+        display: "browser",
     };
 });
