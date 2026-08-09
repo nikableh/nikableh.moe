@@ -18,6 +18,13 @@ jobs:
       - run: nix flake check
       - run: pnpm install
       - run: npx nuxt build --preset github_pages
+      - name: Check SEO tags survived the build
+        run: |
+          grep -q 'rel="canonical"' .output/public/index.html
+          grep -q 'property="og:image"' .output/public/index.html
+          grep -q 'application/ld+json' .output/public/index.html
+          test -f .output/public/sitemap.xml
+          test -f .output/public/robots.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
