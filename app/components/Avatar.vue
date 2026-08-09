@@ -116,7 +116,6 @@ useHead({
             <img
                 src="/nikableh-400.webp"
                 alt="nikableh's profile picture"
-                class="u-photo"
                 width="200"
                 height="259"
                 draggable="false"

@@ -28,7 +28,7 @@ export default defineNuxtConfig({
       name: site.author,
       alternateName: 'Nika Krasnova',
       url: site.url,
-      image: `${site.url}/nikableh-400.webp`,
+      image: `${site.url}/nikableh.png`,
       sameAs: [...site.profiles],
     },
   },
