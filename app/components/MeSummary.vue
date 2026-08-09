@@ -17,12 +17,13 @@ provideBirthday(props.birthday);
     <section class="h-card flex flex-col justify-center items-center gap-5">
         <Avatar />
         <!-- Invisible, but microformats parsers read it: this h-card is the
-             card for the site itself. -->
+             card for the site itself, and the name lives in the page h1,
+             outside the card's reach. -->
         <a class="u-url u-uid hidden" :href="`${site.url}/`">{{ site.name }}</a>
-        <p class="text-center">
+        <span class="hidden">
             <span class="p-name">{{ name }}</span>
-            <em> (aka&nbsp;<span class="p-nickname">{{ alias }}</span>)</em>
-        </p>
+            <span class="p-nickname">{{ alias }}</span>
+        </span>
         <MeSummaryTable
             :location="location"
             :gender="gender"

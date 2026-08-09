@@ -2,8 +2,6 @@
 title: nikableh
 ---
 
-# nikableh
-
 ::MeSummary
 ---
 name: Nika
@@ -23,6 +21,8 @@ links:
     href: mailto:nika@nikableh.moe
 ---
 ::
+
+# Nika, aka nikableh
 
 ## About me
 
