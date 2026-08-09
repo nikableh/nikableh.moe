@@ -16,9 +16,10 @@ export default defineNuxtConfig({
   hooks: {
     'build:manifest'(manifest) {
       for (const entry of Object.values(manifest)) {
-        // Nuxt prefetches every image a route's chunks reference. The friend
-        // badges sit below the fold behind loading="lazy", so those hints only
-        // steal bandwidth from the LCP image on first paint.
+        // Nuxt prefetches every image a route's chunks reference. Nothing
+        // imports one today, but anything that does belongs below the fold
+        // behind loading="lazy", where the hint only steals bandwidth from
+        // the LCP image on first paint.
         if (entry.resourceType === 'image') {
           entry.prefetch = false
         }

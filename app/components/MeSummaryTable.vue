@@ -1,4 +1,10 @@
 <script setup lang="ts">
+defineProps<{
+    location: string;
+    gender: string;
+    links: Array<{ label: string; value: string; href: string }>;
+}>();
+
 const { age } = useBirthday();
 </script>
 
@@ -8,36 +14,22 @@ const { age } = useBirthday();
     >
         <div class="grid grid-cols-[auto_auto] gap-x-7 w-max whitespace-pre overflow-x-auto">
             <span>Location:</span>
-            <p>Novi Sad, Serbia</p>
+            <p>{{ location }}</p>
 
             <span>Gender:</span>
-            <p>she/her 🏳️‍⚧️</p>
+            <p>{{ gender }}</p>
 
             <span>Age:</span>
             <p>{{ age }} y.o.</p>
 
-            <span>Telegram:</span>
-            <p>
-                <NuxtLink to="https://t.me/nikableh" class="text-link"
-                    >@nikableh</NuxtLink
-                >
-            </p>
-
-            <span>Github:</span>
-            <p>
-                <NuxtLink to="https://github.com/nikableh" class="text-link"
-                    >@nikableh</NuxtLink
-                >
-            </p>
-
-            <span>Email:</span>
-            <p>
-                <NuxtLink
-                    to="mailto:nika@nikableh.moe"
-                    class="text-link break-all"
-                    >nika@nikableh.moe</NuxtLink
-                >
-            </p>
+            <template v-for="link in links" :key="link.href">
+                <span>{{ link.label }}:</span>
+                <p>
+                    <NuxtLink :to="link.href" class="text-link break-all">{{
+                        link.value
+                    }}</NuxtLink>
+                </p>
+            </template>
         </div>
     </div>
 </template>
