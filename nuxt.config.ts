@@ -5,9 +5,45 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
 
-  modules: ['@nuxt/image', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc', '@nuxt/icon', 'nuxt-llms'],
+  modules: ['@nuxtjs/seo', '@nuxt/fonts', '@nuxt/content', '@nuxtjs/mdc', '@nuxt/icon', 'nuxt-llms'],
 
   css: ['~/assets/css/main.css'],
+
+  site: {
+    url: site.url,
+    name: site.name,
+    description: site.description,
+    // GitHub Pages serves directory indexes and 301s the slashless form,
+    // so the slashed URL is the one canonicals and the sitemap must carry.
+    trailingSlash: true,
+  },
+
+  // The share card is a hand-made static file in public/.
+  ogImage: { enabled: false },
+  linkChecker: { enabled: false },
+
+  schemaOrg: {
+    identity: {
+      type: 'Person',
+      name: site.author,
+      alternateName: 'Nika Krasnova',
+      url: site.url,
+      image: `${site.url}/nikableh-400.webp`,
+      sameAs: [...site.profiles],
+    },
+  },
+
+  robots: {
+    // The client-side content dumps; not needed to render the page.
+    disallow: ['/__nuxt_content/'],
+  },
+
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      failOnError: true,
+    },
+  },
 
   routeRules: {
     '/site.webmanifest': { prerender: true },
@@ -57,7 +93,9 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Maple Mono', src: '/fonts/MapleMonoNL-Regular.woff2' }
+      // The named fallback lets the module emit a metric-adjusted local face,
+      // so text laid out before the woff2 arrives does not shift on swap.
+      { name: 'Maple Mono', src: '/fonts/MapleMonoNL-Regular.woff2', fallbacks: ['Courier New'] }
     ],
     defaults: {
       preload: true,
@@ -66,7 +104,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: site.name,
+      title: site.author,
       charset: 'UTF-8',
       viewport: 'width=device-width, initial-scale=1, user-scalable=yes',
       htmlAttrs: {
@@ -77,6 +115,8 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+        // Google's SERP favicon wants a square at a multiple of 48px.
+        { rel: "icon", type: "image/png", sizes: "192x192", href: "/android-chrome-192x192.png" },
         { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
         { rel: "manifest", href: "/site.webmanifest" },
       ],

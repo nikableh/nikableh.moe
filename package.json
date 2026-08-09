@@ -16,8 +16,8 @@
     "@nuxt/content": "^3.15.2",
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "2.3.1",
-    "@nuxt/image": "^2.0.0",
     "@nuxtjs/mdc": "^0.22.2",
+    "@nuxtjs/seo": "^5.3.10",
     "@tailwindcss/vite": "^4.3.3",
     "better-sqlite3": "^13.0.1",
     "canvas-confetti": "^1.9.4",
@@ -30,7 +30,6 @@
   "devDependencies": {
     "@iconify-json/material-symbols": "^1.2.87",
     "@tailwindcss/typography": "^0.5.20",
-    "@types/canvas-confetti": "^1.9.0",
-    "less": "^4.8.0"
+    "@types/canvas-confetti": "^1.9.0"
   }
 }
