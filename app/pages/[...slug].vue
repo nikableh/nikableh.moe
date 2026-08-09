@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { site } from "~~/shared/site";
+
 const route = useRoute();
 
 const { data } = await useAsyncData(() =>
-    queryCollection("content").path(route.fullPath).first()
+    queryCollection("content").path(route.path).first()
 );
 
 if (!data.value) {
@@ -12,9 +14,16 @@ if (!data.value) {
     });
 }
 
+// The homepage's description is the site's; keeping it out of the
+// frontmatter leaves shared/site.ts as the single copy.
+const description =
+    route.path === "/" ? site.description : data.value?.description;
+
 useSeoMeta({
     title: data.value?.title,
-    description: data.value?.description,
+    description,
+    ogTitle: data.value?.title,
+    ogDescription: description,
 });
 </script>
 
