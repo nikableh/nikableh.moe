@@ -25,9 +25,18 @@ const { age } = useBirthday();
             <template v-for="link in links" :key="link.href">
                 <span>{{ link.label }}:</span>
                 <p>
-                    <NuxtLink :to="link.href" class="text-link break-all">{{
-                        link.value
-                    }}</NuxtLink>
+                    <!-- rel=me makes these two-way identity proofs; noreferrer
+                         stays off so frens see the visit in their logs. -->
+                    <NuxtLink
+                        :to="link.href"
+                        :rel="link.href.startsWith('mailto:') ? 'me' : 'me noopener'"
+                        :class="[
+                            'text-link',
+                            'break-all',
+                            link.href.startsWith('mailto:') ? 'u-email' : 'u-url',
+                        ]"
+                        >{{ link.value }}</NuxtLink
+                    >
                 </p>
             </template>
         </div>

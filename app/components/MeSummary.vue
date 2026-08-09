@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { site } from "~~/shared/site";
+
 const props = defineProps<{
     name: string;
     alias: string;
@@ -12,9 +14,15 @@ provideBirthday(props.birthday);
 </script>
 
 <template>
-    <section class="flex flex-col justify-center items-center gap-5">
+    <section class="h-card flex flex-col justify-center items-center gap-5">
         <Avatar />
-        <p class="text-center">{{ name }} <em>(aka&nbsp;{{ alias }})</em></p>
+        <!-- Invisible, but microformats parsers read it: this h-card is the
+             card for the site itself. -->
+        <a class="u-url u-uid hidden" :href="`${site.url}/`">{{ site.name }}</a>
+        <p class="text-center">
+            <span class="p-name">{{ name }}</span>
+            <em> (aka&nbsp;<span class="p-nickname">{{ alias }}</span>)</em>
+        </p>
         <MeSummaryTable
             :location="location"
             :gender="gender"

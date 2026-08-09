@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
     <a
         :href="props.website"
-        rel="noopener noreferrer"
+        rel="noopener"
         class="select-none inline-block m-1"
     >
         <img
@@ -23,9 +23,3 @@ const props = defineProps<{
         />
     </a>
 </template>
-
-<style lang="css" scoped>
-.badge {
-    image-rendering: pixelated;
-}
-</style>
