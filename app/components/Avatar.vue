@@ -1,25 +1,33 @@
 <script setup lang="ts">
-import confetti from "canvas-confetti";
+import type { Shape } from "canvas-confetti";
 
-function bleh(e: PointerEvent) {
+// Rasterizing "bleh" to a canvas is the expensive half of the click handler,
+// and the text never changes — do it once and keep the shape.
+let blehShape: Shape | undefined;
+
+async function bleh(e: PointerEvent) {
+    // Dynamic so the library rides an async chunk instead of the entry that
+    // gates hydration; onMounted below warms it, so this await is a cache hit.
+    const { default: confetti } = await import("canvas-confetti");
+
     const scalar = 3;
 
     let normX = e.clientX / window.innerWidth;
     let normY = e.clientY / window.innerHeight;
+
+    blehShape ??= confetti.shapeFromText({
+        text: "bleh",
+        color: "#FFFFFF",
+        scalar: scalar,
+        fontFamily: "Maple Mono",
+    });
 
     confetti({
         spread: 360,
         ticks: 50,
         gravity: 0,
         startVelocity: 5,
-        shapes: [
-            confetti.shapeFromText({
-                text: "bleh",
-                color: "#FFFFFF",
-                scalar: scalar,
-                fontFamily: "Maple Mono",
-            }),
-        ],
+        shapes: [blehShape],
         particleCount: 1,
         flat: true,
         scalar: scalar,
@@ -60,6 +68,10 @@ onMounted(() => {
             .then(() => {
                 fullResolution.value = image.src;
             });
+
+        // Warm the confetti chunk too, so the first click on the avatar
+        // fires instantly instead of waiting on a fetch.
+        import("canvas-confetti");
     };
 
     const whenIdle = () =>
@@ -104,6 +116,7 @@ useHead({
             <img
                 src="/nikableh-400.webp"
                 alt="nikableh's profile picture"
+                class="u-photo"
                 width="200"
                 height="259"
                 draggable="false"
@@ -142,18 +155,3 @@ useHead({
         </span>
     </div>
 </template>
-
-<style lang="css" scoped>
-.pulse {
-    animation: zoomPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes zoomPulse {
-  0%, 100% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-</style>

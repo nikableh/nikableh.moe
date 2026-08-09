@@ -1,4 +1,4 @@
-import confetti from "canvas-confetti";
+type Confetti = typeof import("canvas-confetti").default;
 
 // Deliberately not a component: Vue's SSR renderer emits nothing for an empty
 // template while the client renderer emits a comment node, so a component that
@@ -8,7 +8,7 @@ export const useBirthdayConfetti = () => {
 
   let animationId: number | null = null;
 
-  function fireConfetti() {
+  function fireConfetti(confetti: Confetti) {
     const colors: string[] = [
       "#f2f641",
       "#f5a02c",
@@ -37,7 +37,7 @@ export const useBirthdayConfetti = () => {
     });
 
     if (isBirthday.value) {
-      animationId = requestAnimationFrame(fireConfetti);
+      animationId = requestAnimationFrame(() => fireConfetti(confetti));
     }
   }
 
@@ -50,12 +50,21 @@ export const useBirthdayConfetti = () => {
 
   // confetti() reaches for document, so none of this can run while prerendering.
   onMounted(() => {
+    // Pure decoration; skip it entirely for anyone who asked for less motion.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     watch(
       isBirthday,
-      (newValue) => {
+      async (newValue) => {
         if (newValue) {
           if (animationId === null) {
-            fireConfetti();
+            // Dynamic so the library stays out of the entry chunk 364 days
+            // a year.
+            const { default: confetti } = await import("canvas-confetti");
+
+            if (animationId === null && isBirthday.value) {
+              fireConfetti(confetti);
+            }
           }
         } else {
           stopConfetti();
