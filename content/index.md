@@ -16,6 +16,9 @@ links:
   - label: Github
     value: "@nikableh"
     href: https://github.com/nikableh
+  - label: LinkedIn
+    value: "@nikableh"
+    href: https://linkedin.com/in/nikableh/
   - label: Email
     value: nika@nikableh.moe
     href: mailto:nika@nikableh.moe
